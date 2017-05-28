@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Oxygen|Rubik');
+
+body, html {
+    padding: 20px 0;
+    margin: 0;
+    background: #cd201f;
+    color: white;
+    font-family:'Oxygen', 'Rubix', sans-serif;
+}
+
+h1 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 3em;
+    margin-bottom: 25px;
+}

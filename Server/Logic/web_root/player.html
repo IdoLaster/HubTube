@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>HubTube</title>
+        <link rel="icon" type="image/png" href="favicon.png">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+            media="screen">
+        <link rel="stylesheet" href="../../Common/general-styles.css" media="screen" />
+
+        <style media="screen">
+            body, html{
+                padding: 0;
+                margin: 0;
+                background: #e93231;
+            }
+            header {
+                background: #cd201f;
+                padding: 20px 0;
+                -webkit-box-shadow: 0px 2px 11px 0px rgba(50, 50, 50, 0.5);
+                -moz-box-shadow:    0px 2px 11px 0px rgba(50, 50, 50, 0.5);
+                box-shadow:         0px 2px 11px 0px rgba(50, 50, 50, 0.5);
+                font-size: 1.5em;
+            }
+            header h1 { margin-top: 0; }
+            header .container {
+                text-align: center;
+                font-size: 1.1em;
+            }
+            #player {
+                width: 100%;
+                margin: 30px 0;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>HubTube</h1>
+            <div class="container" id="video-loaded" style="display: none;">
+                Now playing: <strong><span id="song-name">A test Song</span></strong>
+                <br>
+                Requested by: <strong><span id="player-name">Someone</span></strong>
+            </div>
+            <div class="container" id="video-loading">
+                Waiting for next song...
+            </div>
+        </header>
+        <main class="container">
+            <div id="player"></div>
+        </main>
+
+        <script src="http://code.jquery.com/jquery-3.2.1.min.js" charset="utf-8"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="events.js" charset="utf-8"></script>
+        <script src="net.js" charset="utf-8"></script>
+        <script src="youtube-handler.js" charset="utf-8"></script>
+        <script>
+            get_next_song();
+        </script>
+    </body>
+</html>
