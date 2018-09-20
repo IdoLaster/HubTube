@@ -40,7 +40,10 @@ class SongRequest():
         Extracting and returning the video id from the url.
         @return: Only the video ID from the url.
         """
-        return self.__song_url.split('/')[3].split('=')[1]
+        if "watch" in self.__song_url:
+            return self.__song_url.split('/')[3].split('=')[1]
+        else:
+            return self.__song_url.split('/')[3]
 
     # Returning the song request class as json, so we could send it.
     def to_json(self):
